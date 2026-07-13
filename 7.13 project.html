@@ -525,7 +525,7 @@
                 }, i * 100);
             }
             
-            showBubble('헤헤! 너무 시원하고 행복해요! 🐾');
+            showBubble('너무 행복해요! 💖');
 
             setTimeout(() => {
                 dogFace.textContent = '🐶';
@@ -555,7 +555,7 @@
             toyBall.style.transform = 'scale(1) rotate(0deg)';
 
             dogFace.textContent = '👀';
-            showBubble('허걱! 집사님이 공을 잡았다!! 🎾');
+            showBubble('장난감을 잡았다!! 🎾');
 
             setTimeout(() => {
                 toyBall.style.left = '40%';
@@ -571,7 +571,7 @@
                     spawnParticle(180 + (Math.random() * 60 - 30), 160 + (Math.random() * 60 - 30), '🌟');
                 }
                 
-                showBubble('앙! 공 물어왔어요! 또 던져줘요! 🥎');
+                showBubble('장난감 가져왔어요! 또 던져줘요! 🥎');
                 isThrowing = false;
                 
                 setTimeout(() => {
@@ -582,7 +582,7 @@
 
         function feedSnack(e) {
             dogFace.textContent = '😋';
-            showBubble('짭짭 맛있는 뼈다귀 간식 최고! 🦴');
+            showBubble('맛있는 간식 최고! 🦴');
             
             const rect = playArena.getBoundingClientRect();
             for (let i = 0; i < 5; i++) {
