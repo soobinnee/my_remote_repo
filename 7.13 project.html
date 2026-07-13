@@ -41,6 +41,14 @@
     </script>
     
     <style>
+        /* --- 강아지 발바닥 커서 --- */
+        html, body {
+            cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 32 32'><ellipse cx='16' cy='22' rx='8' ry='6' fill='%238B5E3C'/><ellipse cx='7' cy='12' rx='3.2' ry='4' fill='%238B5E3C'/><ellipse cx='14' cy='7' rx='3.2' ry='4' fill='%238B5E3C'/><ellipse cx='22' cy='7' rx='3.2' ry='4' fill='%238B5E3C'/><ellipse cx='28' cy='12' rx='3.2' ry='4' fill='%238B5E3C'/></svg>") 16 16, auto;
+        }
+        a, button, [onclick], .cursor-pointer, input[type="text"], input[type="file"] {
+            cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 32 32'><ellipse cx='16' cy='22' rx='8' ry='6' fill='%234F3B32'/><ellipse cx='7' cy='12' rx='3.2' ry='4' fill='%234F3B32'/><ellipse cx='14' cy='7' rx='3.2' ry='4' fill='%234F3B32'/><ellipse cx='22' cy='7' rx='3.2' ry='4' fill='%234F3B32'/><ellipse cx='28' cy='12' rx='3.2' ry='4' fill='%234F3B32'/></svg>") 16 16, pointer;
+        }
+
         /* --- 커스텀 스크롤바 --- */
         ::-webkit-scrollbar {
             width: 10px;
@@ -98,7 +106,7 @@
     <!-- 🛠️ 실시간 사진 편집 안내 배너 -->
     <div class="bg-choco-300 text-cream-100 text-center py-2.5 px-4 text-xs md:text-sm font-semibold sticky top-0 z-50 flex justify-center items-center gap-2">
         <span>🐶</span>
-        <span>🐾 귀염뽀짝 크림푸들 땅콩이의 공간에 오신 것을 환영합니다!</span>
+        <span>🐾 크림푸들 땅콩이의 공간에 오신 것을 환영합니다!</span>
     </div>
 
     <!-- 네비게이션 바 -->
@@ -111,6 +119,7 @@
                 <a href="#intro" class="hover:text-choco-100 transition-colors duration-200">자기소개</a>
                 <a href="#charms" class="hover:text-choco-100 transition-colors duration-200">매력백과</a>
                 <a href="#gallery" class="hover:text-choco-100 transition-colors duration-200">일상 갤러리</a>
+                <a href="#guestbook" class="hover:text-choco-100 transition-colors duration-200">방명록</a>
             </div>
             <a href="#playzone" class="font-cute text-lg bg-choco-100 text-cream-100 px-5 py-2 rounded-full hover:bg-choco-200 transition shadow-md hover:scale-105 active:scale-95 duration-200">
                 🐾 땅콩이와 놀기
@@ -201,7 +210,7 @@
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
                         <div class="bg-cream-100/60 p-4 rounded-xl border border-cream-300/40">
                             <span class="text-xs text-choco-100 font-semibold uppercase tracking-wider block mb-1">견종</span>
-                            <span class="text-lg font-bold text-choco-200">크림푸들</span>
+                            <span class="text-lg font-bold text-choco-200">크림푸들 (Cream Poodle)</span>
                         </div>
                         <div class="bg-cream-100/60 p-4 rounded-xl border border-cream-300/40">
                             <span class="text-xs text-choco-100 font-semibold uppercase tracking-wider block mb-1">나이</span>
@@ -238,7 +247,7 @@
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <!-- 카드 1 -->
-                <div class="bg-white p-8 rounded-3xl shadow-lg border-2 border-cream-200 hover:border-choco-100 transition-all duration-300 transform hover:-translate-y-2 group">
+                <div class="bg-white p-8 rounded-3xl shadow-lg border-2 border-cream-200 hover:border-choco-100 transition-all duration-300 transform hover:-translate-y-2 group hover:-rotate-2 hover:scale-[1.03]">
                     <div class="w-16 h-16 bg-cream-200 rounded-2xl flex items-center justify-center text-3xl mb-6 group-hover:scale-110 transition-transform">
                         🐩
                     </div>
@@ -249,18 +258,18 @@
                 </div>
 
                 <!-- 카드 2 -->
-                <div class="bg-white p-8 rounded-3xl shadow-lg border-2 border-cream-200 hover:border-choco-100 transition-all duration-300 transform hover:-translate-y-2 group">
+                <div class="bg-white p-8 rounded-3xl shadow-lg border-2 border-cream-200 hover:border-choco-100 transition-all duration-300 transform hover:-translate-y-2 group hover:rotate-2 hover:scale-[1.03]">
                     <div class="w-16 h-16 bg-cream-200 rounded-2xl flex items-center justify-center text-3xl mb-6 group-hover:scale-110 transition-transform">
                         💨
                     </div>
-                    <h3 class="font-cute text-2xl font-bold text-choco-200 mb-3">프로 산책러 땅콩</h3>
+                    <h3 class="font-cute text-2xl font-bold text-choco-200 mb-3">오늘도 산책 가자</h3>
                     <p class="text-choco-200/80 font-light leading-relaxed text-sm md:text-base">
                         '산...책...?' 단어만 들려도 귀가 쫑긋, 꼬리가 모터처럼 돌아가요!
                     </p>
                 </div>
 
                 <!-- 카드 3 -->
-                <div class="bg-white p-8 rounded-3xl shadow-lg border-2 border-cream-200 hover:border-choco-100 transition-all duration-300 transform hover:-translate-y-2 group">
+                <div class="bg-white p-8 rounded-3xl shadow-lg border-2 border-cream-200 hover:border-choco-100 transition-all duration-300 transform hover:-translate-y-2 group hover:-rotate-1 hover:scale-[1.03]">
                     <div class="w-16 h-16 bg-cream-200 rounded-2xl flex items-center justify-center text-3xl mb-6 group-hover:scale-110 transition-transform">
                         💤
                     </div>
@@ -271,7 +280,7 @@
                 </div>
 
                 <!-- 카드 4 -->
-                <div class="bg-white p-8 rounded-3xl shadow-lg border-2 border-cream-200 hover:border-choco-100 transition-all duration-300 transform hover:-translate-y-2 group">
+                <div class="bg-white p-8 rounded-3xl shadow-lg border-2 border-cream-200 hover:border-choco-100 transition-all duration-300 transform hover:-translate-y-2 group hover:rotate-1 hover:scale-[1.03]">
                     <div class="w-16 h-16 bg-cream-200 rounded-2xl flex items-center justify-center text-3xl mb-6 group-hover:scale-110 transition-transform">
                         🏡
                     </div>
@@ -282,7 +291,7 @@
                 </div>
 
                 <!-- 카드 5 -->
-                <div class="bg-white p-8 rounded-3xl shadow-lg border-2 border-cream-200 hover:border-choco-100 transition-all duration-300 transform hover:-translate-y-2 group col-md-span-2 lg:col-span-1">
+                <div class="bg-white p-8 rounded-3xl shadow-lg border-2 border-cream-200 hover:border-choco-100 transition-all duration-300 transform hover:-translate-y-2 group hover:-rotate-2 hover:scale-[1.03] md:col-span-2 lg:col-span-1">
                     <div class="w-16 h-16 bg-cream-200 rounded-2xl flex items-center justify-center text-3xl mb-6 group-hover:scale-110 transition-transform">
                         🎾
                     </div>
@@ -319,7 +328,7 @@
                         
                     </div>
                     <div class="text-center font-hand text-3xl text-choco-100 mt-6 tracking-wide">
-                        "언니! 나랑 놀아줄거지?" 🎾
+                        "집사야 나랑 놀아줄거지?" 🎾
                     </div>
                 </div>
 
@@ -417,6 +426,33 @@
                     🦴 최애 간식 주기
                 </button>
             </div>
+        </div>
+    </section>
+
+    <!-- 5-2. 방명록 섹션 -->
+    <section id="guestbook" class="py-20 px-6 bg-cream-200/40 scroll-mt-24">
+        <div class="max-w-2xl mx-auto">
+            <div class="text-center mb-12">
+                <h2 class="font-cute text-4xl md:text-5xl font-bold text-choco-200 mb-4">📝 땅콩이 방명록</h2>
+                <p class="text-choco-100 font-light max-w-lg mx-auto">다녀가신 흔적을 남겨주세요!</p>
+            </div>
+
+            <!-- 작성 폼 -->
+            <div class="bg-white border-4 border-cream-300 rounded-3xl p-6 md:p-8 shadow-xl mb-10">
+                <div class="flex flex-col gap-4">
+                    <input id="gb-name" type="text" maxlength="20" placeholder="이름 (또는 별명)" class="w-full border border-cream-400 rounded-xl px-4 py-3 text-choco-300 outline-none focus:border-choco-100 font-cute text-lg">
+                    <textarea id="gb-message" maxlength="200" rows="3" placeholder="땅콩이에게 하고 싶은 말을 남겨주세요 :)" class="w-full border border-cream-400 rounded-xl px-4 py-3 text-choco-300 outline-none focus:border-choco-100 font-cute text-lg resize-none"></textarea>
+                    <button onclick="submitGuestbook()" class="self-end bg-choco-100 hover:bg-choco-200 text-cream-100 font-cute text-lg px-6 py-3 rounded-xl shadow-md transition active:scale-95 flex items-center gap-2">
+                        🐾 남기기
+                    </button>
+                </div>
+            </div>
+
+            <!-- 방명록 목록 -->
+            <div id="gb-list" class="space-y-4">
+                <!-- JS로 렌더링됨 -->
+            </div>
+            <p id="gb-empty" class="text-center text-choco-100/60 font-light py-8">아직 남겨진 글이 없어요. 첫 번째 방문자가 되어주세요!</p>
         </div>
     </section>
 
@@ -594,6 +630,77 @@
                 setTimeout(() => p.remove(), 1200);
             }
         }
+
+        // --- 방명록 (localStorage 기반) ---
+        const GB_KEY = 'peanut-guestbook';
+
+        function loadGuestbook() {
+            try {
+                const raw = localStorage.getItem(GB_KEY);
+                return raw ? JSON.parse(raw) : [];
+            } catch (e) {
+                return [];
+            }
+        }
+
+        function saveGuestbook(entries) {
+            localStorage.setItem(GB_KEY, JSON.stringify(entries));
+        }
+
+        function escapeHtml(str) {
+            const div = document.createElement('div');
+            div.textContent = str;
+            return div.innerHTML;
+        }
+
+        function renderGuestbook() {
+            const entries = loadGuestbook();
+            const listEl = document.getElementById('gb-list');
+            const emptyEl = document.getElementById('gb-empty');
+
+            if (entries.length === 0) {
+                listEl.innerHTML = '';
+                emptyEl.classList.remove('hidden');
+                return;
+            }
+
+            emptyEl.classList.add('hidden');
+            listEl.innerHTML = entries.slice().reverse().map((entry) => `
+                <div class="bg-white border-2 border-cream-300 rounded-2xl p-5 shadow-md flex justify-between items-start gap-4">
+                    <div>
+                        <p class="font-cute text-xl text-choco-200 font-bold mb-1">🐾 ${escapeHtml(entry.name)}</p>
+                        <p class="text-choco-200/80 font-light leading-relaxed">${escapeHtml(entry.message)}</p>
+                        <p class="text-xs text-choco-200/40 mt-2">${entry.date}</p>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        function submitGuestbook() {
+            const nameInput = document.getElementById('gb-name');
+            const msgInput = document.getElementById('gb-message');
+            const name = nameInput.value.trim();
+            const message = msgInput.value.trim();
+
+            if (!name || !message) {
+                alert('이름과 메시지를 모두 입력해주세요!');
+                return;
+            }
+
+            const entries = loadGuestbook();
+            entries.push({
+                name,
+                message,
+                date: new Date().toLocaleDateString('ko-KR', { year: 'numeric', month: 'long', day: 'numeric' })
+            });
+            saveGuestbook(entries);
+
+            nameInput.value = '';
+            msgInput.value = '';
+            renderGuestbook();
+        }
+
+        renderGuestbook();
     </script>
 </body>
 </html>
